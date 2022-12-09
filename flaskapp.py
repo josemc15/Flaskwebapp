@@ -6,7 +6,7 @@ import pickle
 import joblib
 
 
-model = pickle.load(open('C:/Users/mcjos/Desktop/Project/New folder/final project\labour.pkl','rb'))
+model = pickle.load(open('labour.pkl','rb'))
 impute = joblib.load('meanimpute')
 winsor = joblib.load('winsor')
 encoding = joblib.load('encoding')
