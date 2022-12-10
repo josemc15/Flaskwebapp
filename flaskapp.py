@@ -42,10 +42,10 @@ def success():
 
         
         clean2=pd.DataFrame(scale.transform(impute1))
-        clean3=pd.DataFrame(encoding.transform(labour_new1).todense())
+        clean3=pd.DataFrame(encoding.transform(Employee_data_new1).todense())
         clean_data=pd.concat([clean2,clean3],axis=1,ignore_index=True)
         prediction=pd.DataFrame(model.predict(clean_data),columns=['Productivity'])
-        final_data=pd.concat([prediction, labour_new1],axis=1)
+        final_data=pd.concat([prediction, Employee_data_new1],axis=1)
         
         return render_template('data.html', Y = final_data.to_html(justify='center'))
     
